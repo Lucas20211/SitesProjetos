@@ -1,0 +1,108 @@
+ :root{
+    --colorgreenlight: #C0D8C0;
+    --colorwhite: #F5EEDC;
+    --colorrose: #DD4A48;
+    --colorbege: #ECB390;
+    --colorblack: #000;
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Sans serif';
+}
+/* Header setup */
+header{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    width: 100%;
+    height: 60px;
+    background-color: var(--colorgreenlight);
+}
+#menu{
+    display: flex;
+    list-style: none;
+    gap: .3rem;
+}
+/* Todos os  li a button*/
+li, a ,button{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--colorblack);
+    text-decoration: none;
+}
+.logo{
+    font-size: 18px;
+    padding: 6px;
+    border: 1px hidden;
+    border-radius: 20px;
+    border-color: var(--colorrose);
+    transition: all 0.4s ease 0s; 
+}
+.logo:hover{
+    color: var(--colordark);
+    background-color: var(--colorbege);
+    border: 1px hidden;
+    border-radius: 25px;
+}
+
+/*--- botao menu ---*/
+#btn-mobile{
+    display: none;
+}
+@media (max-width: 600px){
+    #btn-mobile{
+        display: block;
+    }
+    #menu{
+        /*  display: none; */
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: var(--colorgreenlight);
+        height: calc(100vh - 70px) ;
+        z-index: 1000;
+    }
+    #navbar.active #menu{
+        display: flex;
+    }
+}
+/*------ Transições de Cursor ----*/
+#navbar li a{
+    display: block;
+    transition: all 0.3s ease 0s; 
+    padding: .4rem;  
+}
+#navbar li  a:hover{
+    color: var(--colordark);
+    background-color: var(--colorbege);
+    border: 1px hidden;
+    border-radius: 25px;
+}
+/*---/Transições de Cursor ----*/
+.home_page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(/img/bghomenutri.png);
+    background-repeat: no-repeat;background-size: cover;
+}
+.home_page img{
+    width: 520px;
+    height: 380px;
+}
+.home_page{
+    width: 100%;
+    height: 580px;
+}
+.text_home{
+    font-size: 40px;
+    font-weight: 500;
+    width: 100px;
+}
